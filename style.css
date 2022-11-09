@@ -11,6 +11,7 @@ body {
 }
 /* UTILS */
 .btn-blue {
+  font-size: 17px;
   background-color: rgb(0, 135, 255);
   border: none;
   color: white;
@@ -27,8 +28,17 @@ body {
   margin-bottom: 20px;
 }
 
+.mb-30 {
+  margin-bottom: 30px;
+}
 .mb-40 {
   margin-bottom: 40px;
+}
+.mb-50 {
+  margin-bottom: 50px;
+}
+.mb-60 {
+  margin-bottom: 60px;
 }
 .fs-15 {
   font-size: 15px;
@@ -38,13 +48,18 @@ body {
   font-size: 35px;
 }
 
+.pt-15 {
+  padding-top: 15px;
+}
 .pt-50 {
   padding-top: 50px;
 }
  .pt-100 {
    padding-top: 100px;
  }
-
+.pd {
+  padding: 15px 20px;
+}
 /* HEADER */
 header {
   width: 100%;
@@ -78,16 +93,16 @@ header {
 
 
 
-ul {
+.navbar-menù ul, .navbar-actions ul {
   list-style-type: none;
   display: flex;
 }
 
-ul li {
+.navbar-menù ul li, .navbar-actions ul li {
   padding: 0 15px;
 }
 
-ul li a {
+.navbar-menù ul li a, .navbar-actions ul li a {
   color: black;
   text-decoration: none;
 }
@@ -119,11 +134,12 @@ ul li a {
 }
 
 .btn-blue.big {
-  padding: 10px;
+  padding: 10px 15px;
 }
 
 .dropbox-description i{
-  font-size: 35px;
+  font-size: 40px;
+  padding-top: 30px;
 }
 
 .dropbox-preview img {
@@ -135,8 +151,7 @@ ul li a {
 
 /* BILLING PERIOD */
 .box {
-  height: 1000px;
-  width: 72%;
+  width: 66%;
   margin: 0 auto;
 }
 
@@ -180,9 +195,8 @@ ul li a {
 }
 
 .col {
-  color: white;
-  background-color: black;
-  height: 1000px;
+  height: 1050px;
+  border: 2px solid lightgrey;
 }
 
 .card-client {
@@ -194,4 +208,57 @@ ul li a {
 .card-client i, .card-client span {
   line-height: 40px;
   vertical-align: middle;
+}
+
+.card-type-of-plan ul, .card-details ul, .card-plan-highlights ul {
+  list-style-type: none;
+}
+.card-type-of-plan li, .card-details li, .card-plan-highlights li {
+  padding-top: 20px;
+}
+
+.trial {
+  text-align: center;
+}
+
+.btn-blue.contact-us {
+  padding: 10px 70px;
+}
+
+.buy a {
+  color: blue;
+}
+time {
+  color: grey;
+}
+
+.card-plan-highlights i {
+  color: rgb(0, 135, 255);
+}
+
+/* CARD CONTACT-SALES */
+.sales-office {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  border: 2px solid lightgrey;
+}
+
+.sales-office-title {
+  position: absolute;
+  top: 25%;
+  left: 3%;
+}
+
+.sales-office-description {
+  position: absolute;
+  bottom: 10%;
+  left: 3%;
+  width: 63%;
+}
+
+.sales-office-contact-us {
+  position: absolute;
+  top: 29%;
+  right: 3%;
 }
