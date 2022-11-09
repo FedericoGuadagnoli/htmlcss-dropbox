@@ -1,0 +1,197 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GENERICS */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+/* UTILS */
+.btn-blue {
+  background-color: rgb(0, 135, 255);
+  border: none;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+.fs-15 {
+  font-size: 15px;
+}
+
+.fs-35 {
+  font-size: 35px;
+}
+
+.pt-50 {
+  padding-top: 50px;
+}
+ .pt-100 {
+   padding-top: 100px;
+ }
+
+/* HEADER */
+header {
+  width: 100%;
+  height: 80px;
+  background-color: pink;
+}
+
+.navbar {
+  height: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .left, .navbar .right {
+  width: calc(100% / 2);
+}
+
+.navbar .left {
+  justify-content: flex-start;
+}
+
+.navbar .right {
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.navbar-logo {
+  padding: 0 15px;
+}
+
+
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+ul li {
+  padding: 0 15px;
+}
+
+ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.btn-blue.small {
+   padding: 10px;
+   cursor: pointer;
+}
+
+/* MAIN */
+
+
+/* JUMBOTRON */
+.jumbotron {
+  background-color: rgb(180, 208, 231);
+  height: 540px;
+}
+
+.jb-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.container h1 {
+  font-size: 63px;
+  font-weight: 900;
+}
+
+.btn-blue.big {
+  padding: 10px;
+}
+
+.dropbox-description i{
+  font-size: 35px;
+}
+
+.dropbox-preview img {
+  width: 100%;
+  display: block;
+}
+
+/* SECTION BUSINESS PLAN */
+
+/* BILLING PERIOD */
+.box {
+  height: 1000px;
+  width: 72%;
+  margin: 0 auto;
+}
+
+.billing-period {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.check {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 5px solid rgb(0, 97, 255);
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.uncheck {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid lightgrey;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.monthly span, .annual span {
+  vertical-align: middle;
+}
+
+/* TYPE OF PLAN */
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.row > * {
+  width: calc(100% / 3);
+}
+
+.col {
+  color: white;
+  background-color: black;
+  height: 1000px;
+}
+
+.card-client {
+  height: 40px;
+  border-bottom: 2px solid lightgrey;
+  text-align: center;
+}
+
+.card-client i, .card-client span {
+  line-height: 40px;
+  vertical-align: middle;
+}
