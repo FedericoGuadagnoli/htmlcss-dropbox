@@ -322,7 +322,7 @@ header {
 .buy a, .partnership a {
   color: blue;
 }
-time {
+.card-type-of-plan * span {
   color: grey;
 }
 
