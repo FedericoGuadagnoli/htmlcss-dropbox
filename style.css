@@ -10,20 +10,72 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 /* UTILS */
-.btn-blue {
+* i {
+  cursor: pointer;
+}
+
+* ul {
+  list-style-type: none;
+}
+
+/* UTILS/BUTTON */
+.btn {
   font-size: 17px;
-  background-color: rgb(0, 135, 255);
-  border: none;
-  color: white;
-  text-decoration: none;
   cursor: pointer;
 }
 
 .container {
+  height: 100%;
   width: 80%;
   margin: 0 auto;
 }
 
+/* UTILS/COLORS */
+.c-white {
+  color: white;
+}
+
+.white {
+  background-color: white;
+}
+.blue {
+  background-color: rgb(0, 135, 255);
+  border: none;
+}
+
+.dark-blue {
+  background-color: rgb(0,0,139);
+}
+
+.green {
+  background-color: rgb(162,211,155);
+}
+
+.crimson {
+  background-color: rgb(220,20,60);
+}
+
+.red {
+  background-color: rgb(255, 0, 0);
+}
+
+.powder-blue {
+  background-color: rgb(176,224,230);
+}
+
+.deep-sky-blue {
+  background-color: rgb(176,224,230);
+}
+
+.firebrick {
+  background-color: rgb(178,34,34);
+}
+
+.gold {
+  background-color: rgb(255,215,0);
+}
+
+/* UTILS/MARGIN */
 .mb-20 {
   margin-bottom: 20px;
 }
@@ -40,14 +92,8 @@ body {
 .mb-60 {
   margin-bottom: 60px;
 }
-.fs-15 {
-  font-size: 15px;
-}
 
-.fs-35 {
-  font-size: 35px;
-}
-
+/* UTILS/PADDING */
 .pt-15 {
   padding-top: 15px;
 }
@@ -60,16 +106,31 @@ body {
 .pd {
   padding: 15px 20px;
 }
+
+/* UTILS FONT SIZE */
+.fs-15 {
+  font-size: 15px;
+}
+
+.fs-35 {
+  font-size: 35px;
+}
+
 /* HEADER */
 header {
   width: 100%;
   height: 80px;
-  background-color: pink;
+  background-color: white;
+  box-shadow: 0 0 3px #666;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .navbar {
   height: 100%;
-  background-color: white;
   display: flex;
   align-items: center;
 }
@@ -80,6 +141,7 @@ header {
 
 .navbar .left {
   justify-content: flex-start;
+  padding-left: 20px;
 }
 
 .navbar .right {
@@ -87,18 +149,25 @@ header {
   padding-right: 20px;
 }
 
-.navbar-logo {
-  padding: 0 15px;
+#logo {
+  animation: logo 1s linear infinite;
 }
 
-
+@keyframes logo {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
 
 .navbar-menù ul, .navbar-actions ul {
-  list-style-type: none;
   display: flex;
 }
 
 .navbar-menù ul li, .navbar-actions ul li {
+  display: inline-block;
   padding: 0 15px;
 }
 
@@ -107,18 +176,17 @@ header {
   text-decoration: none;
 }
 
-.btn-blue.small {
+.btn.blue.small {
    padding: 10px;
-   cursor: pointer;
 }
 
 /* MAIN */
 
 
 /* JUMBOTRON */
-.jumbotron {
-  background-color: rgb(180, 208, 231);
-  height: 540px;
+#jumbotron {
+  background-color: rgb(180,208,231);
+  height: 583px;
 }
 
 .jb-content {
@@ -133,13 +201,35 @@ header {
   font-weight: 900;
 }
 
-.btn-blue.big {
+.btn.big {
   padding: 10px 15px;
 }
 
 .dropbox-description i{
   font-size: 40px;
-  padding-top: 30px;
+  padding-top: 20px;
+  color: red;
+  animation: asroma 2s linear infinite;
+}
+
+@keyframes asroma {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.5);
+    color: yellow;
+  }
+  75% {
+    transform: scale(1.2);
+    color: yellow;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .dropbox-preview img {
@@ -151,6 +241,7 @@ header {
 
 /* BILLING PERIOD */
 .box {
+  height: 100%;
   width: 66%;
   margin: 0 auto;
 }
@@ -210,9 +301,8 @@ header {
   vertical-align: middle;
 }
 
-.card-type-of-plan ul, .card-details ul, .card-plan-highlights ul {
-  list-style-type: none;
-}
+
+
 .card-type-of-plan li, .card-details li, .card-plan-highlights li {
   padding-top: 20px;
 }
@@ -221,11 +311,15 @@ header {
   text-align: center;
 }
 
-.btn-blue.contact-us {
+.contact-us {
   padding: 10px 70px;
 }
 
-.buy a {
+.contact-us a {
+  text-decoration: none;
+  color: white;
+}
+.buy a, .partnership a {
   color: blue;
 }
 time {
@@ -239,14 +333,17 @@ time {
 /* CARD CONTACT-SALES */
 .sales-office {
   width: 100%;
-  height: 280px;
-  position: relative;
   border: 2px solid lightgrey;
+}
+
+.sales-office-content {
+  height: 200px;
+  position: relative;
 }
 
 .sales-office-title {
   position: absolute;
-  top: 25%;
+  top: 10%;
   left: 3%;
 }
 
@@ -259,6 +356,188 @@ time {
 
 .sales-office-contact-us {
   position: absolute;
-  top: 29%;
+  top: 15%;
   right: 3%;
+}
+
+/* SECTION FIND A PARTNER */
+ .col-find-a-partner-img {
+   width: 65%;
+ }
+
+ #partner {
+   width: 100%;
+ }
+
+ .col-find-a-partner-content {
+   width: 35%;
+ }
+
+ .card-find-a-partner-content {
+   height: 400px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+ }
+
+
+/* SECTION DROPBOX BUSINESS */
+.wrapper-feature {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+.col-feature {
+  flex-basis: 27%;
+  margin-bottom: 20px;
+}
+
+.card-feature {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-feature img {
+  width: 100%;
+}
+
+
+/* SECTION PARTNERSHIP COMPANIES */
+.wrapper-companies {
+  display: flex;
+}
+
+.col-companies {
+  flex-basis: calc(100% / 3);
+  height: 449px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-companies {
+  flex-basis: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-big-companies {
+  flex-basis: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5px 20px;
+}
+
+.card-companies:hover {
+  border: 10px solid rgba(255, 255, 255, 0.5);
+}
+
+.card-big-companies img {
+  width: 84%;
+}
+
+hr {
+  width: 70px;
+}
+
+.card-companies img {
+  width: 66%;
+  height: 30%;
+  filter: invert(1);
+}
+
+/* SECTION CHOOSE DROPBOX BUSINESS */
+#choose-dropbox-business {
+  background-color: rgb(180, 208, 231);
+  height: 300px;
+}
+.flex-direction {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-direction div .btn {
+  padding: 5px 35px;
+  border: none;
+  background-color: white;
+}
+
+/* FAQ */
+#asks {
+  height: 600px;
+}
+
+.flex-direction-faq {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col-faq {
+  flex-basis: 12%;
+  border-bottom: 2px solid grey;
+}
+
+.col-faq strong {
+  line-height: 96px;
+  vertical-align: middle;
+}
+
+.col-faq i {
+  padding-left: 18%;
+  vertical-align: middle;
+}
+
+/* FOOTER */
+footer {
+  background-color: black;
+  color: white;
+}
+
+.box-top, .box-bottom {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.box-top {
+  height: 400px;
+}
+.box-bottom {
+  height: 100px;
+  line-height: 100px;
+}
+
+.row-footer {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col-footer {
+  width: calc(100% / 5);
+}
+
+.card-list ul li {
+  padding: 5px 0;
+}
+
+.card-list ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+#choose-language {
+  border: none;
+  color: white;
+  background-color: black;
+  cursor: pointer;
 }
